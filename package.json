@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && tap --cov test",
+    "lint": "standard"
   },
   "keywords": [],
   "author": "tolulopeOntop",
@@ -16,5 +17,15 @@
     "url": "https://github.com/codeontop/hsl-to-hex/issues"
   },
   "homepage": "https://github.com/codeontop/hsl-to-hex#readme",
-  "description": ""
+  "description": "Convert HSL colors to RGB colors in hex format. ## Install ```sh npm install --save @c_ontop/hsl-to-hex ``` ## API ``` require('hsl-to-hex') => Function hsl(hue, saturation, luminosity)` => String ``` ## Example ```js var hsl = require('hsl-to-hex') var hue = 133 var saturation = 40 var luminosity = 60 var hex = hsl(hue, saturation, luminosity) console.log(hex) // #70c282 ``` ## License ISC",
+  "dependencies": {
+    "hsl-to-rgb-for-reals": "^1.1.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "tap": "^12.0.1"
+  },
+  "directories": {
+    "test": "test"
+  }
 }
